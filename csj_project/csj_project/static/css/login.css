@@ -1,0 +1,36 @@
+#loginContainer{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    border-radius: 1em;
+    padding: 2vh;
+    background: linear-gradient(to top, rgba(3,23,39, 0.9), rgba(11,135,125, 0.9));
+    color: white;
+}
+
+#loginContainer form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+#loginContainer div{
+    padding-bottom: 1vh;
+}
+
+#failedLogin{
+    color: red;
+}
+
+.XLSpace{
+    height: 20vh;
+}
+
+.mediumSpace{
+    height: 10vh;
+}
+
+.smallSpace{
+    height: 5vh;
+}

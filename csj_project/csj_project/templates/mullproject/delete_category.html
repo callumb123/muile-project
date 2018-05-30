@@ -1,0 +1,47 @@
+{% extends 'mullproject/base.html' %}
+{% load staticfiles %}
+{% block head_block %}
+<!-- Custom styles for this template -->
+<link href={% static 'css/delete.css' %} rel="stylesheet">
+
+{% endblock %}
+{% block title_block %}
+- Delete Category
+{% endblock %}
+
+
+{% block body_block %}
+
+{% if user.is_authenticated %}
+
+<div class="XLSpace"></div>
+<div class="container" id="deleteContainer">
+	<h1><u>Delete Category</u></h1>
+	<div id="deletionConfirmation">
+        {% if cat %}
+	        {% if deleted %}
+		        Category '{{ cat.gaelic_name }}' has been deleted.
+	        {% else %}
+		        Category '{{ cat.gaelic_name }}' cannot be deleted because the following settlements are still in this category:
+                {% for settlement in settlements %}
+                    <br>{{ settlement.headname }}
+                {% endfor %}
+	        {% endif %}
+        {% else %}
+            This category does not exist and cannot be deleted.
+        {% endif %}
+	    <a class="btn-link" href="/manage/">Return</a>
+	</div>
+</div>
+
+{% else %}
+
+<div class="XLSpace"></div>
+<div class="container" id="notAuthorisedText">
+	This page is for administration use only. If you are an admin, login <a class="btn-link" href="/login/">here</a>,
+	or return to the homepage <a class="btn-link"href="/index/">here</a>.
+</div>
+
+{% endif %}
+
+{% endblock %}

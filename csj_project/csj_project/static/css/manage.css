@@ -1,0 +1,110 @@
+#outerManageContainer{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    border-radius: 1em;
+    padding-left: 0vh;
+    background: linear-gradient(to top, rgba(3,23,39, 0.9), rgba(11,135,125, 0.9));
+    color: white;
+}
+
+#outerManageContainer a{
+    color: #fcd137;
+}
+
+#manageAllContainer{
+    display: flex;
+}
+
+#managementContainerHeader{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	margin-bottom: 5vh;
+	margin-top: 5vh;
+}
+
+#uploadFile{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	margin: auto;
+}
+
+#fileUploadButton{
+  background-color: #e8e8e8;
+  color: #126872;
+  border-style: solid;
+  border-color: #e8e8e8;
+}
+
+#fileUploadButton:hover{
+  background: linear-gradient(#0B877D, #031727);
+  color: #e8e8e8;
+}
+
+#uploadFile h5{
+	margin-right: 2vw;
+}
+
+#managementContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 1vw;
+    align-items: center;
+    text-align: left;
+}
+
+#managementContainer h1{
+    margin-top: -4vh;
+    padding-bottom: 2vh;
+}
+
+#manageAddButton{
+    margin: auto;
+    margin-bottom: 3vh;
+}
+
+#management_holder{
+    display: flex;
+    flex-direction: column;
+}
+
+#management_holder li{
+    padding-bottom: 1.5vh;
+}
+
+#fileFailedUpload{
+	color: red;
+	margin-top: 2vh;
+	margin-bottom: 0vh;
+}
+
+#fileUploadedSuccessfully{
+	margin-top: 2vh;
+	margin-bottom: 0vh;
+}
+
+#notAuthorisedText{
+    width: 40%;
+    border-radius: 1em;
+    padding: 2vh;
+    background: linear-gradient(to top, rgba(3,23,39, 0.9), rgba(11,135,125, 0.9));
+    color: white;
+}
+
+#notAuthorisedText a{
+    color: #fcd137;
+}
+
+.XLSpace{
+    height: 20vh;
+}
+
+.mediumSpace{
+    height: 10vh;
+}
+
+.smallSpace{
+    height: 5vh;
+}

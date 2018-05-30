@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Settlement
+  - Canvas
+  - Land
+  - INFOBOX
+  - GaelicName
+  - BackButton
+  - God
+  - HikerIcon
+  - Status
+  - Guess
+  - GuessMarker
+  - Question
+  - SettlementMarker
+  - AnswerUI
+  - AnswersLeft
+  - CameraControlButtons
+  - Options
+  - GoToQuiz
+  - MoveOn
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: imhigh
+    uniqueID: 1051139671
+    locked: 0
+  - name: New Layer
+    uniqueID: 895029201
+    locked: 0

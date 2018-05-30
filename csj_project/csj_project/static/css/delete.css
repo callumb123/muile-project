@@ -1,0 +1,53 @@
+#deleteContainer{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    padding: 2vh;
+    border-radius: 1em;
+    background: linear-gradient(to top, rgba(3,23,39, 0.9), rgba(11,135,125, 0.9));
+    color: white;
+}
+
+#deleteContainer a{
+    color: #fcd137;
+}
+
+#deleteContainer h1{
+    flex: 1;
+    margin:auto;
+    padding-bottom: 3vh;
+}
+
+#deletionConfirmation{
+    display: flex;
+    flex-direction: column;
+}
+
+#deletionConfirmation a{
+    margin: auto;
+    padding-top: 1vh;
+}
+
+#notAuthorisedText{
+    width: 40%;
+    border-radius: 1em;
+    padding: 2vh;
+    background: linear-gradient(to top, rgba(3,23,39, 0.9), rgba(11,135,125, 0.9));
+    color: white;
+}
+
+#notAuthorisedText a{
+    color: #fcd137;
+}
+
+.XLSpace{
+    height: 20vh;
+}
+
+.mediumSpace{
+    height: 10vh;
+}
+
+.smallSpace{
+    height: 5vh;
+}

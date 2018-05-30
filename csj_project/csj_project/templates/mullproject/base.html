@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="icon" href="{% static 'images/faviconGreen.png' %}">
+
+      <!-- Bootstrap core CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+	<!-- jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	{% if request.resolver_match.url_name != 'index' %}
+      		<link href={% static 'css/base.css' %} rel="stylesheet">
+	{% endif %}
+
+      {% block head_block %}
+	    {% endblock %}
+        <title>
+        MUILE
+        {% block title_block %}
+        {% endblock %}
+        </title>
+    </head>
+
+    <body>
+      {% if request.resolver_match.url_name != 'index' %}
+          <div class="container text-center" id="navBox">
+		<a href="{% url 'index' %}"><img id="logo" src={% static 'images/MullLogo.png' %}></img></a>
+		{% with url_name=request.resolver_match.url_name %}
+                  <a class="btn btn-default {% if url_name == 'map' %}active{% endif %}" href="{% url 'map' %}" id="navButtonMap"><span>Mapa</span></a>
+                  <a class="btn btn-default {% if url_name == 'game' %}active{% endif %}" href="{% url 'game' %}" id="navButtonGame"><span>Geama</span></a>
+                  <a class="btn btn-default {% if 'categories' in request.build_absolute_uri %}active{% endif %}" href="{% url 'categories' %}" id="navButtonCategories"><span>Roinnean-seòrsa</span></a>
+                  <a class="btn btn-default {% if url_name == 'about' %}active{% endif %}" href="{% url 'about' %}" id="navButtonAbout"><span>Fios</span></a>
+                  {% if user.is_authenticated %}
+                  <a class="btn btn-default " href="{% url 'logout' %}" id="navButtonLogout"><span>Log A-mach</span></a>
+                  {% endif %}
+		{% endwith %}
+	 </div>
+      {% endif %}
+	{% block body_block %}
+        {% endblock %}
+    </body>
+</html>

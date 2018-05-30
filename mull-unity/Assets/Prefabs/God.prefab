@@ -1,0 +1,111 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1921451840790754}
+  m_IsPrefabParent: 1
+--- !u!1 &1921451840790754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4062081087726254}
+  - component: {fileID: 114972284763762584}
+  - component: {fileID: 114822513541425814}
+  - component: {fileID: 114010300877823156}
+  - component: {fileID: 114398921838925760}
+  - component: {fileID: 114913475688871326}
+  m_Layer: 0
+  m_Name: God
+  m_TagString: God
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4062081087726254
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1921451840790754}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114010300877823156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1921451840790754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b74f66f8fd8a514fb3325e6da35246e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settlementPrefab: {fileID: 1464851015527156, guid: e8174b14260eaf64eb20e42ed7adbb77,
+    type: 2}
+--- !u!114 &114398921838925760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1921451840790754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf12ebd964e667540bc6447cf179bb7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settlementThreshold: 5
+  questionThreshold: 3
+--- !u!114 &114822513541425814
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1921451840790754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67a87d718eeb8fa4cacc699ef2ff2ae1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114913475688871326
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1921451840790754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d04e87eca06cbb478e3082c3574d230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114972284763762584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1921451840790754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82a0d8796fb141d4a8ee1427ee8237bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  headnameOriginal: {fileID: 0}
+  slug: {fileID: 0}
+  answerText: {fileID: 0}
+  answerStatus: {fileID: 0}
+  guessText: {fileID: 0}
+  cameraControlButtons: {fileID: 0}

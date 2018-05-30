@@ -1,0 +1,112 @@
+{% extends 'mullproject/base.html' %}
+{% load staticfiles %}
+{% block head_block %}
+<!-- Custom styles for this template -->
+<link href={% static 'css/manage.css' %} rel="stylesheet">
+{% endblock %}
+{% block title_block %}
+- Management
+{% endblock %}
+
+
+{% block body_block %}
+
+{% if user.is_authenticated %}
+
+<div class="mediumSpace"></div>
+<div class="container" id="outerManageContainer">
+	<div class="container-fluid" id="managementContainerHeader">
+		<div id="uploadFile">
+			<h5>Upload a .xlsx file:</h5>
+			<form action="{% url 'manage' %}" method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				<input type="file" name="csv_file" />
+				<input id="fileUploadButton" type="submit" value="Upload" />
+			</form>
+			{% if unsuitableFileType %}
+				<p id="fileFailedUpload">Failed to upload file. File must be a non-empty .xlsx file.</p>
+			{% endif %}
+			{% if fileUploaded %}
+				<p id="fileUploadedSuccessfully">File successfully uploaded!</p>
+			{% endif %}
+		</div>
+	</div>
+	<div class="container" id="manageAllContainer">
+		<div class="container" id="managementContainer">
+			<h1><u>Categories</u></h1>
+			<div id="management_holder">
+
+                <a class="btn-link" id="manageAddButton" href="/add_category/">Add new Category</a>
+
+			    {% if categories %}
+				<ul>
+				    {% for category in categories %}
+				    <li>
+					{{ category.gaelic_name }}
+		        <a class="btn-link" href="/delete_category/{{ category.slug }}" onclick="return confirm('Are you sure you wish to delete category {{ category.gaelic_name }}?')">Delete</a>
+				    </li>
+				    {% endfor %}
+				</ul>
+			    {% else %}
+				<p><strong>There are no categories present.</strong></p>
+			    {% endif %}
+
+			</div>
+		</div>
+
+		<div class="container" id="managementContainer">
+			<h1><u>Settlements</u></h1>
+			<div id="management_holder">
+                <a class="btn-link" id="manageAddButton" href="/add_settlement/">Add new Settlement</a>
+
+			    {% if settlements %}
+				<ul>
+				    {% for settlement in settlements %}
+				    <li>
+					{{ settlement.headname }}
+		            <a class="btn-link" href="/delete_settlement/{{ settlement.slug }}" onclick="return confirm('Are you sure you wish to delete settlement {{ settlement.headname }}?')">Delete</a>
+				    </li>
+				    {% endfor %}
+				</ul>
+			    {% else %}
+				<p><strong>There are no settlements present.</strong></p>
+			    {% endif %}
+
+			</div>
+		</div>
+
+        <div class="container" id="managementContainer">
+			<h1><u>Questions</u></h1>
+			<div id="management_holder">
+
+                <a class="btn-link" id="manageAddButton" href="/add_question/">Add new Question</a>
+
+			    {% if questions %}
+				<ul>
+				    {% for question in questions %}
+				    <li>
+					Q: {{ question.text_gaelic }}
+                    A: {{ question.answer.headname }}
+		            <a class="btn-link" href="/delete_question/{{ question.id }}" onclick="return confirm('Are you sure you wish to delete question {{ question.text_gaelic }}?')">Delete</a>
+				    </li>
+				    {% endfor %}
+				</ul>
+			    {% else %}
+				<p><strong>There are no questions present.</strong></p>
+			    {% endif %}
+
+			</div>
+		</div>
+	</div>
+</div>
+<div class="mediumSpace"></div>
+{% else %}
+<div class="XLSpace"></div>
+<div class="container" id="notAuthorisedText">
+	This page is for administration use only.<br>If you are an admin, login <a class="btn-link" href="/login/">here</a>,
+	or return to the homepage <a class="btn-link"href="/index/">here</a>.
+</div>
+
+{% endif %}
+
+{% endblock %}

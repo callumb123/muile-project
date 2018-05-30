@@ -1,0 +1,145 @@
+{% extends 'mullproject/base.html' %}
+{% load staticfiles %}
+
+{% block head_block %}
+
+<script src="{% static 'js/aboutTranslation.js' %}"></script>
+<!-- Custom styles for this template -->
+<link href={% static 'css/about.css' %} rel="stylesheet">
+{% endblock %}
+{% block title_block %}
+- Fios
+{% endblock %}
+
+
+{% block body_block %}
+
+<div class="mediumSpace"></div>
+
+<div class="container" id="outerAboutContainer">
+
+    <div class="smallSpace"></div>
+
+    <div id="aboutHeaderEnglish">
+    <h2>About</h2>
+    </div>
+
+    <div id="aboutHeaderGaelic">
+    <h2>Fios</h2>
+    </div>
+
+    <div id="buttonHolder">
+    <input type="button" id="button" value="English" onclick="changeText(this.value);"/>
+    </div>
+
+    <div class="smallSpace"></div>
+
+    <div class="container" id="aboutContainer">
+        <div id="aboutContainerEnglish">
+            MUILE is based on research by Dr. Alasdair C. Whyte from Salen, Mull. It presents the
+            place-names of the oldest recorded settlements in two medieval districts of south-east Mull:
+            Forsa and Moloros. Forsa is the name which gives us the modern place-name Glen Forsa in
+            the central part of Mull; the name Moloros is no longer used or known locally.
+            <br>
+            <br>
+            These place-names were first recorded in royal documents in the late 15th century but some
+            of the names are much older than that. The names were created by Gaelic-speakers and by
+            settlers speaking a language known as Old Norse which is closely related to modern
+            Icelandic. These speakers of Old Norse were probably naming settlements in Mull from as
+            early as the 9th century; some of the Gaelic place-names may have been established long
+            before that.
+            <br>
+            <br>
+            Many of the place-names featured in MUILE are still used by local people today; others are
+            long forgotten and are brought to life by MUILE.
+            <br>
+            <br>
+            These place-names give us an insight into life in Mull in the medieval period which no other
+            source can give us, such as:
+            <br>
+            <br>
+            <ul>
+            <li> how the people of Mull perceived and understood their landscape;</li>
+            <li> how they used the land in rearing animals and growing crops;</li>
+            <li> the names of some local people;</li>
+            <li> local religion.</li>
+            </ul>
+            MUILE was developed at the University of Glasgow by the following people:
+            <br>
+            <br>
+            Callum Boyd, Ben Goodman, Peter Maitland, Kieran Petrie, and Piotrus Watson;
+            <br>
+            Dr. Alasdair C. Whyte and Dr. Katherine Forsyth (Celtic and Gaelic, University of Glasgow);
+            <br>
+            Matt McKenna and Hazel Wallace (Dress for the Weather).
+            <br>
+            <br>
+            The development team would also like to thank: Dr. Simon Taylor (University of Glasgow)
+            and Rona MacDonald (Glasgow Life).
+            <br>
+            <br>
+            For more detailed research on the place-names of Mull, see Alasdair’s Ph.D. <a href="http://theses.gla.ac.uk/8224/">here</a>.
+            <br>
+            <br>
+            For information / queries, contact Alasdair at: alasdaircwhyte@hotmail.co.uk
+            <div class="smallSpace"></div>
+        </div>
+
+        <div id="aboutContainerGaelic">
+            Tha MUILE stèidhte air rannsachadh leis an Dr. Alasdair C. MacIlleBhàin às an t-Sailean ann
+            am Muile. Tha MUILE a’ taisbeanadh na h-ainmeanan- àite as sine a tha againn ann an dà
+            sgìreachd ann an ceann an ear-dheas Mhuile sna meadhan-aoisean: Forsa agus Moloros. Tha
+            an t-ainm Forsa aig muinntir an àite fhathast san ainm Gleann Forsa ann am meadhan an
+            eilein; tha an t-ainm Moloros air a dhol a-mach à bith.
+            <br>
+            <br>
+            Chaidh na h-ainmeanan- àite seo a chlàradh an toiseach ann an cairtean rìoghail na h-Alba aig
+            deireadh a’ chòigeamh linn deug ach tha cuid dhiubh fada nas sine na sin. Tha ainmeanan
+            Gàidhlig agus ainmeanan Seann Lochlannais ann. Tha e an ìre mhath cinnteach gun deach
+            cuid de na h-ainmeanan Lochlannais seo a stèidheachadh san 9mh linn; dh’fhaodadh cuid de
+            na h-ainmeanan Gàidhlig a bhith fada nas sine na sin.
+            <br>
+            <br>
+            Tha tòrr de na h-ainmeanan seo aig muinntir an eilein fhathast ach tha cuid air a dhol a-mach
+            à bith. Tha iad gan ath-bheòthachadh le MUILE.
+            <br>
+            <br>
+            Tha na h-ainmeanan a’ toirt fiosrachadh dhuinn mun eilean sna meadhan-aoisean nach
+            fhaodadh tùs sam bith eile cur an cèill:
+            <br>
+            <ul>
+            <li> mar a chunnaic agus a thuig muinntir an eilein cruth na tìre;</li>
+            <li> mar a chuir muinntir an eilein am fearann gu feum a thaobh àiteachas;</li>
+            <li> ainmeanan daoine ionadach;</li>
+            <li> creideamh ionadach.</li>
+            </ul>
+            Chaidh MUILE a dhealbhadh aig Oilthigh Ghlaschu leis an sgioba a leanas:
+            <br>
+            <br>
+            Callum Boyd, Ben Goodman, Peter Maitland, Kieran Petrie, agus Piotrus Watson;
+            <br>
+            Dr. Alasdair C. MacIlleBhàin agus Dr. Katherine Forsyth (Ceiltis is Gàidhlig, Oilthigh
+            Ghlaschu);
+            <br>
+            Matt McKenna agus Hazel Wallace (Dress for the Weather).
+            <br>
+            <br>
+            Bu mhath leis an sgioba taing a thoirt do Dr. Simon Taylor (Oilthigh Ghlaschu) agus Rona
+            Dhòmhnallach (Glaschu Beò).
+            <br>
+            <br>
+            Airson rannsachadh nas mionaidiche air ainmeanan-àite Mhuile, thoiribh sùil air Ph.D.
+            Alasdair <a href="http://theses.gla.ac.uk/8224/">an seo</a>.
+            <br>
+            <br>
+            Airson fiosrachadh a bharrachd / ceistean, sgrìobh do dh’Alasdair aig:
+            Alasdair.Whyte@glasgow.ac.uk
+            <div class="smallSpace"></div>
+        </div>
+
+    </div>
+</div>
+
+<div class="smallSpace"></div>
+
+{% endblock %}

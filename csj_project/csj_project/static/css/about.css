@@ -1,0 +1,41 @@
+#outerAboutContainer{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    border-radius: 1em;
+    padding-left: 0vh;
+    background: linear-gradient(to top, rgba(3,23,39, 0.9), rgba(11,135,125, 0.9));
+    color: white;
+}
+
+#outerAboutContainer a{
+    color: #fcd137;
+}
+
+
+#aboutContainer{
+    display: flex;
+	width: 80%;
+}
+
+#aboutContainerEnglish{
+    display: none;
+    text-align: justify;
+}
+
+#aboutContainerGaelic{
+    display: block;
+    text-align: justify;
+}
+
+#aboutHeaderEnglish{
+    display: none;
+}
+
+#aboutHeaderGaelic{
+    display: block;
+}
+
+#buttonHolder{
+    display: inline;
+}

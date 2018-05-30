@@ -1,0 +1,157 @@
+#settlementRow{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#current_settlement{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    overflow: auto;
+    background: linear-gradient(to top, rgba(3,23,39, 0.5), rgba(11,135,125, 0.6));
+    border-radius: 1em;
+    margin-bottom: 4vh;
+}
+
+#settlementHeadname{
+    margin-top: 2vh;
+    font-weight: bold;
+    font-size: 28px;
+}
+
+#imageAndInfo{
+    display: flex;
+    flex-direction: row;
+}
+
+#settlementImage{
+    width: 75%;
+}
+
+#settlementImageContainer{
+    width: 50%;
+    margin: auto;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    margin-right: 8vh;
+    align-self: center;
+    order: 3;
+    text-align: right;
+}
+
+#current_settlement h3{
+    padding-top: 2vh;
+    padding-bottom: 4vh;
+    margin: auto;
+    width: 100%;
+}
+
+#settlementInfo{
+   text-align: left;
+   list-style-type: none;
+   width: 100%;
+   margin: auto;
+   order: 1;
+}
+
+#settlementInfo li {
+    margin-bottom: 2vh;
+}
+
+#settlementInfoContainer{
+   display: flex;
+   flex-direction: column;
+   width: 50%;
+   align-self: center;
+}
+
+#settlementWhichCats{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 2vh;
+}
+
+#doesNotExistContainer{
+    display: flex;
+    width: 40%;
+    padding: 2vh;
+    border-radius: 1em;
+    background: linear-gradient(to top, rgba(3,23,39, 0.5), rgba(11,135,125, 0.6));
+    color: white;
+}
+
+#doesNotExistContainer p{
+    margin: auto;
+}
+
+#doesNotExistContainer a{
+    color: #fcd137;
+}
+
+#allSettlements{
+    margin-top:5%;
+}
+
+.pagination{
+    display: flex;
+    width: 100%;
+}
+
+#pageButtonsHolder{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
+}
+
+#pageButtons, #pageButtonsCurrent{
+    display: flex;
+    border-style: solid;
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+    border-color: rgba(11,135,125, 0.6);
+    color: black;
+    overflow: auto;
+    background: linear-gradient(to top, rgba(3,23,39, 0.4), rgba(11,135,125, 0.5));
+}
+
+#pageButtonsCurrent{
+    background: linear-gradient(to top, rgb(3,23,39), rgb(11,135,125));
+}
+
+#mapImage{
+    margin: auto;
+}
+
+.XLSpace{
+    height: 20vh;
+}
+
+.mediumSpace{
+    height: 10vh;
+}
+
+.smallSpace{
+    height: 5vh;
+}
+
+.tinySpace{
+    height: 2vh;
+}
+
+#settlementCertaintyContainer{
+  width: 20%;
+  height: 50%;
+  order: 2;
+  align-self: center;
+}
+
+#settlementCertainty{
+  width: 75%;
+}

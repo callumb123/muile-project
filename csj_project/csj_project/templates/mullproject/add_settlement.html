@@ -1,0 +1,77 @@
+{% extends 'mullproject/base.html' %}
+{% load staticfiles %}
+{% block head_block %}
+<!-- Custom styles for this template -->
+<link href={% static 'css/add_settlement.css' %} rel="stylesheet">
+
+{% endblock %}
+{% block title_block %}
+- Add a Settlement
+{% endblock %}
+
+
+{% block body_block %}
+
+{% if user.is_authenticated %}
+
+<div class="mediumSpace"></div>
+<div class="container" id="addSettlementContainer">
+	<h1><u>Add a Settlement</u></h1>
+        <div class="smallSpace"></div>
+	<div id="settlement_form_holder">
+	    <form method="post" action="/add_settlement/">
+		    {% csrf_token %}
+
+		    {% for hidden in form.hidden_fields %}
+		        {{ hidden }}
+		    {% endfor %}
+
+		    {% for field in form.visible_fields %}
+		    {% cycle 'row' '' as row silent %}
+		    {% if row %}<div class="row">{% endif %}
+		    {% if field.help_text == "Categories:" %}
+		    {% if field.value != "gaelic" or field.value != "old-norse" %}
+		   <div class="container" id="settlementCategoryForm">
+		     <div id="textAndFieldCategory">
+			<div id="settlementCategoryHelpText">{{ field.help_text }}</div>
+		        	<div id="settlementCategoryField">{{ field }}</div>
+				{{ field.label.value }}
+			</div>
+		      </div>
+		    </div>
+		    {% endif %}
+		    {% else %}
+		    <div id="settlement_form">
+			<div id="textAndField">
+		        	<div id="settlementHelpText">{{ field.help_text }}</div>
+		        	<div id="settlementField">{{ field }}</div>
+			</div>
+			<div id="errorTextContainer">
+				<div id="emptyCell"></div>
+				<div id="settlementErrors">{{ field.errors }}</div>
+			</div>
+		    </div>
+		    {% endif %}
+		    {% if not row %}</div>{% endif %}
+		    {% endfor %}
+		    <div class="button_wrapper">
+					<input type="submit" name="submit" value="Add Settlement" />
+				</div>
+
+        <a class="btn-link" id="cancelButton" href="/manage/">Cancel</a>
+	</form>
+	</div>
+</div>
+<div class="XLSpace"></div>
+
+{% else %}
+
+<div class="XLSpace"></div>
+<div class="container" id="notAuthorisedText">
+	This page is for administration use only. If you are an admin, login <a class="btn-link" href="/login/">here</a>,
+	or return to the homepage <a class="btn-link"href="/index/">here</a>.
+</div>
+
+{% endif %}
+
+{% endblock %}

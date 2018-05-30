@@ -1,0 +1,55 @@
+{% extends 'mullproject/base.html' %}
+{% load staticfiles %}
+
+{% block head_block %}
+
+<script src="{% static 'js/settlementTranslation.js' %}"></script>
+<!-- Custom styles for this template -->
+<link href={% static 'css/settlement.css' %} rel="stylesheet">
+{% endblock %}
+{% block title_block %}
+{% if settlement %}
+- {{ settlement.headname }}
+{% else %}
+- Oops...
+{% endif %}
+{% endblock %}
+
+
+{% block body_block %}
+{% if settlement %}
+<div class="smallSpace"></div>
+<div class="container" id="settlementRow">
+<div class="container" id="current_settlement">
+<div id="settlementHeadname">
+    {{ settlement.headname }}
+</div>
+<div id="imageAndInfo">
+    <div id="settlementImageContainer">
+        <img id="settlementImage" src="{% static 'media/settlement_images/' %}{{settlement.slug}}.png">
+    </div>
+    <div class="container" id="settlementInfoContainer">
+        <ul id="settlementInfo">
+            <li>{{ settlement.anglicised }}</li>
+            <li><span id="settlementHistoricalForms{{ forloop.counter }}">Seann Riochdan (Bliadhna)</span><br><b>{{ settlement.historical_forms }}</b></li>
+            <li><span id="settlementLangOfOrigin{{ forloop.counter }}">Cànan</span><br><b>{{ settlement.lang_of_origin }}</b></li>
+            <li><span id="settlementOriginalElements{{ forloop.counter }}">Mìrean Tùsail</span><br><b>{{ settlement.original_elements }}</b></li>
+            <li><span id="settlementInterpretation{{ forloop.counter }}">Mìneachadh</span><br><b>{{ settlement.interpretation }}</b></li>
+            <li><span id="settlementExtent{{ forloop.counter }}">Luach/Meud</span><br><b>{{ settlement.extent }}</b></li>
+        </ul>
+    </div>
+	<div id="settlementCertaintyContainer">
+		<img id="settlementCertainty" src="{% static 'images/certainties/' %}certainty{{ settlement.certainty }}.png"></img><br>
+		<span id="settlementCertainty">Cinnt</span>
+	</div>
+</div>
+</div>
+</div>
+
+{% else %}
+<div class="XLSpace"></div>
+<div class="container" id="doesNotExistContainer">
+	<p>This settlement doesn't exist! Make sure you have entered the correct URL.</p>
+</div>
+{% endif %}
+{% endblock %}

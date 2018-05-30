@@ -1,0 +1,208 @@
+/*
+ * Globals
+ */
+
+@font-face {
+  font-family: 'standard';
+  src:url('/static/fonts/Std Neuzeit Grotesk Light.otf');
+}
+
+
+
+* {
+  font-family: 'standard';
+}
+
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: rgba(229,85,107,1.0);
+  background-color: #ffffff;
+  border: .05rem solid #ededed;
+}
+
+body {
+  height: 100%;
+  background-color: #333;
+  background: url("../../static/images/background2.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.jumbotron{
+  background: rgba(0, 0,0, 0);
+}
+
+.container{
+  max-width: 1300px;
+}
+
+#navBox{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#navBox a{
+  flex-basis: 15%;
+  font-size: 100%;
+  margin-right: 2vw;
+  margin-top: 4vh;
+}
+
+#navBox .active {
+  background: linear-gradient(#0B877D, #031727);
+  color: #fff;
+}
+
+#navButtonHome {
+  background-color: #e8e8e8;
+  color: #126872;
+}
+
+#navButtonHome:hover span {
+  display:none;
+}
+
+#navButtonHome:hover{
+  background: linear-gradient(#0B877D, #031727);
+  color: #e8e8e8;
+}
+
+#navButtonHome:hover:before {
+    content:"Home";
+}
+
+#navButtonGame{
+  background: #e8e8e8;
+  color: #126872;
+}
+
+#navButtonGame:hover span {
+  display:none;
+}
+
+#navButtonGame:hover{
+  background: linear-gradient(#0B877D, #031727);
+  color: #e8e8e8;
+}
+
+#navButtonGame:hover:before {
+    content:"Game";
+}
+
+#navButtonMap{
+  background: #e8e8e8;
+  color: #126872;
+}
+
+#navButtonMap:hover span {
+  display:none;
+}
+
+#navButtonMap:hover{
+  background: linear-gradient(#0B877D, #031727);
+  color: #e8e8e8;
+}
+
+#navButtonMap:hover:before {
+    content:"Map";
+}
+
+#navButtonCategories{
+  background: #e8e8e8;
+  color: #126872;
+}
+
+#navButtonCategories:hover span {
+  display:none;
+}
+
+#navButtonCategories:hover{
+  background: linear-gradient(#0B877D, #031727);
+  color: #e8e8e8;
+}
+
+#navButtonCategories:hover:before {
+    content:"Name Categories";
+}
+
+#navButtonAbout{
+  background: #e8e8e8;
+  color: #126872;
+}
+
+#navButtonAbout:hover span {
+  display:none;
+}
+
+#navButtonAbout:hover{
+  background: linear-gradient(#0B877D, #031727);
+  color: #e8e8e8;
+}
+
+#navButtonAbout:hover:before {
+    content:"About";
+}
+
+#navButtonLogout{
+  background: #e8e8e8;
+  color: #126872;
+}
+
+#navButtonLogout:hover span {
+  display:none;
+}
+
+#navButtonLogout:hover{
+  background: linear-gradient(#0B877D, #031727);
+  color: #e8e8e8;
+}
+
+#navButtonLogout:hover:before {
+    content:"Log Out";
+}
+
+#logo{
+    height: 9vh;
+    width: 23vh;
+}
+
+#outerManageContainer{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    border-radius: 1em;
+    padding-left: 0vh;
+    background: linear-gradient(to top, rgba(3,23,39, 0.9), rgba(11,135,125, 0.9));
+    color: white;
+}
+
+#outerManageContainer a{
+    color: #fcd137;
+}
+
+#manageAllContainer{
+    display: flex;
+}
+
+.XLSpace{
+    height: 20vh;
+}
+
+.mediumSpace{
+    height: 10vh;
+}
+
+.smallSpace{
+    height: 5vh;
+}

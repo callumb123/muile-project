@@ -1,0 +1,37 @@
+{% extends 'mullproject/base.html' %}
+{% load staticfiles %}
+
+{% block head_block %}
+<script src="{% static 'js/categoriesTranslation.js' %}"></script>
+<!-- Custom styles for this template -->
+<link href={% static 'css/categories.css' %} rel="stylesheet">
+{% endblock %}
+{% block title_block %}
+- Roinnean-seòrsa
+{% endblock %}
+
+
+{% block body_block %}
+{% if categories %}
+<div class="mediumSpace"></div>
+<div id="allCategories" class="container-fluid">
+{% for category in categories %}
+	{% cycle 'row' '' as row silent %}
+	{% if row %}
+    <div class="row">
+    {% endif %}
+	<div id="current_category{{ forloop.counter }}"><a href="{% url 'settlements' category.slug %}">
+		<h3><b><span id="categoryGaelicName{{ forloop.counter }}">{{ category.gaelic_name }}</span><span id="categoryEnglishName{{ forloop.counter }}">{{ category.english_name }}</span></b></h3>
+	</a></div>
+	{% if not row %}
+    </div>
+    {% endif %}
+{% endfor %}
+{% else %}
+<div class="XLSpace"></div>
+<div class="container" id="doesNotExistContainer">
+	<p>There are currently no categories present.</p>
+</div>
+{% endif %}
+</div>
+{% endblock %}

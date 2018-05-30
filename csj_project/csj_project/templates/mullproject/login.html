@@ -1,0 +1,26 @@
+{% extends 'mullproject/base.html' %}
+{% load staticfiles %}
+
+{% block head_block %}
+<!-- Custom styles for this template -->
+<link rel="stylesheet" href="{% static 'css/login.css' %}">
+{% endblock %}
+{% block title_block %}
+- Login
+{% endblock %}
+
+{% block body_block %}
+<div class="XLSpace"></div>
+<div class="container" id="loginContainer">
+    {% if failed %}
+        <div id="failedLogin">Incorrect login details. Please try again.</div>
+    {% endif %}
+	<form method="post" action="/login/">
+	    {% csrf_token %}
+	    <div id="loginUsername">Username: <input type="text" name="username" value=""/></div>
+	    <div id="loginPassword">Password: <input type="password" name="password" value=""/></div>
+	    <input type="submit" value="Log In" />
+	</form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "3DMULLBUILD.data.unityweb",
+"asmCodeUrl": "3DMULLBUILD.asm.code.unityweb",
+"asmMemoryUrl": "3DMULLBUILD.asm.memory.unityweb",
+"asmFrameworkUrl": "3DMULLBUILD.asm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}

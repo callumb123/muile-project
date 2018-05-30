@@ -1,0 +1,29 @@
+{% extends 'mullproject/base.html' %}
+{% load staticfiles %}
+{% block head_block %}
+<!-- Custom styles for this template -->
+<link href={% static 'css/map.css' %} rel="stylesheet">
+<script src={% static 'js/TemplateData/UnityProgress.js' %}></script>
+	<script src={% static 'js/MapBuild/Build/UnityLoader.js' %}></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.1/leaflet.css" rel="stylesheet" />
+<script type="text/javascript">
+        var gameInstance = UnityLoader.instantiate("gameContainer", "../../static/js/MapBuild/Build/3DMULLBUILD.json", {onProgress: UnityProgress});
+</script>
+{% endblock %}
+{% block title_block %}
+- Mapa
+{% endblock %}
+
+{% block body_block %}
+  <body style="background: none; background-color: #e8e8e8;">
+    <div class="smallSpace"></div>
+    <div class="container-fluid" id="mapContainer">
+	      <div class="webgl-content">
+	      <div id="gameContainer"></div>
+	      <div class="footer">
+	        <div class="webgl-logo"></div>
+	        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+	      </div>
+	    </div></div>
+  </body>
+{% endblock %}

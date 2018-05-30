@@ -1,0 +1,93 @@
+{% extends 'mullproject/base.html' %}
+{% load staticfiles %}
+
+{% block head_block %}
+
+<script src="{% static 'js/settlementTranslation.js' %}"></script>
+<!-- Custom styles for this template -->
+<link href={% static 'css/settlement.css' %} rel="stylesheet">
+{% endblock %}
+{% block title_block %}
+{% if category %}
+- {{ category.gaelic_name }}
+{% else %}
+- Oops...
+{% endif %}
+{% endblock %}
+
+
+{% block body_block %}
+{% if category %}
+<div id="allSettlements">
+{% if settlements %}
+    {% for settlement in settlements %}
+	    {% cycle 'row' '' as row silent %}
+	    {% if row %}
+	        <div class="container" id="settlementRow">
+    	{% endif %}
+	    <div class="container" id="current_settlement">
+            <div id="settlementHeadname">
+                {{ settlement.headname }}
+            </div>
+		    <div id="imageAndInfo">
+                <div id="settlementImageContainer">
+                    <img id="settlementImage" src="{% static 'media/settlement_images/' %}{{settlement.slug}}.png">
+                </div>
+		        <div class="container" id="settlementInfoContainer">
+			        <ul id="settlementInfo">
+                        <li>{{ settlement.anglicised }}</li>
+				        <li><span id="settlementHistoricalForms{{ forloop.counter }}">Seann Riochdan (Bliadhna)</span><br><b>{{ settlement.historical_forms }}</b></li>
+				        <li><span id="settlementLangOfOrigin{{ forloop.counter }}">Cànan</span><br><b>{{ settlement.lang_of_origin }}</b></li>
+				        <li><span id="settlementOriginalElements{{ forloop.counter }}">Mìrean Tùsail</span><br><b>{{ settlement.original_elements }}</b></li>
+				        <li><span id="settlementInterpretation{{ forloop.counter }}">Mìneachadh</span><br><b>{{ settlement.interpretation }}</b></li>
+				        <li><span id="settlementExtent{{ forloop.counter }}">Luach/Meud</span><br><b>{{ settlement.extent }}</b></li>
+			        </ul>
+		        </div>
+			<div id="settlementCertaintyContainer">
+			<img id="settlementCertainty" src="{% static 'images/certainties/' %}certainty{{ settlement.certainty }}.png"></img><br>
+			<span id="settlementCertainty{{ forloop.counter }}">Cinnt</span>
+			</div>
+		    </div>
+		</div>
+	    {% if not row %}
+    </div>
+    {% endif %}
+{% endfor %}
+
+<div class="pagination">
+    <span class="step-links container" id="pageButtonsHolder">
+
+        {% if settlements.paginator.num_pages > 1 %}
+            {% for n in settlements.paginator.page_range %}
+                <a href="?page={{ n }}">
+                    {% if settlements.number == n %}
+                    <div class="container" id="pageButtonsCurrent">
+                        <h3>{{ n }}</h3>
+                    </div>
+                    {% else %}
+                    <div class="container" id="pageButtons">
+                        <h3>{{ n }}</h3>
+                    </div>
+                    {% endif %}
+                </a>
+            {% endfor %}
+        {% endif %}
+
+    </span>
+</div>
+
+<div class="tinySpace"></div>
+
+{% else %}
+<div class="XLSpace"></div>
+<div class="container" id="doesNotExistContainer">
+	<p>There are currently no settlements in this category.</p>
+</div>
+{% endif %}
+{% else %}
+<div class="XLSpace"></div>
+<div class="container" id="doesNotExistContainer">
+<p> This category doesn't exist! Make sure you have entered the correct URL.</p>
+</div>
+{% endif %}
+{% endblock %}

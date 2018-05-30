@@ -1,0 +1,23 @@
+body{
+   background: #e8e8e8 !important;
+}
+
+#mapContainer{
+    padding: 0;
+}
+
+#gameContainer{
+    height: 80vh;
+}
+
+.XLSpace{
+    height: 20vh;
+}
+
+.mediumSpace{
+    height: 10vh;
+}
+
+.smallSpace{
+    height: 5vh;
+}

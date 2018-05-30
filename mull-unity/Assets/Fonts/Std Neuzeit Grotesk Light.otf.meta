@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3fb37031de5f8994db5d59c86f935a0e
+timeCreated: 1520081121
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: DIN 30640 Std
+  fontNames:
+  - DIN 30640 Std
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

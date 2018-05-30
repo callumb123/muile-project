@@ -1,0 +1,44 @@
+{% extends 'mullproject/base.html' %}
+{% load staticfiles %}
+{% block head_block %}
+<!-- Custom styles for this template -->
+<link href={% static 'css/index.css' %} rel="stylesheet">
+<script src="{% static 'js/indexTranslation.js' %}"></script>
+{% endblock %}
+{% block title_block %}
+- Dachaigh
+{% endblock %}
+
+{% block body_block %}
+
+<!--<embed src="{% static 'sound/Crossing_the_Chasm.mp3' %}" autostart="true" loop="true" hidden="true">-->
+
+<ul class="cb-slideshow container-fluid">
+	<li>
+		<span></span>
+	</li>
+	<li>
+		<span></span>
+	</li>
+	<li>
+		<span></span>
+	</li>
+	<li>
+		<span></span>
+	</li>
+
+
+    <div class="container" id="homepageText">
+        <div class="jumbotron">
+            <div>
+                <img id="logo" src={% static 'images/MullLogo.png' %}><br>
+                <a href="{% url 'game' %}" class="btn btn-lg btn-secondary" id="navButtonGame"><span>Cluich gaema!</span></a><br><br>
+			    <a href="{% url 'map' %}" class="btn btn-lg btn-secondary" id="navButtonMap"><span>Rùraich am mapa!</span></a><br><br>
+			    <a href="{% url 'categories' %}" class="btn btn-lg btn-secondary" id="navButtonCategories"><span>Tagh roinn-seòrsa!</span></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</ul>
+
+{% endblock %}

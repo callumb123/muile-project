@@ -1,0 +1,54 @@
+{% extends 'mullproject/base.html' %}
+{% load staticfiles %}
+{% block head_block %}
+<!-- Custom styles for this template -->
+<link href={% static 'css/add_question.css' %} rel="stylesheet">
+
+{% endblock %}
+{% block title_block %}
+- Add a Question
+{% endblock %}
+
+
+{% block body_block %}
+
+{% if user.is_authenticated %}
+
+<div class="mediumSpace"></div>
+<div class="container" id="addContainer">
+	<h1><u>Add a Question</u></h1>
+        <div class="smallSpace"></div>
+	<div id="category_form_holder">
+	    <form method="post" action="/add_question/">
+		    {% csrf_token %}
+
+		    {% for hidden in form.hidden_fields %}
+		        {{ hidden }}
+		    {% endfor %}
+
+		    {% for field in form.visible_fields %}
+		    <div id="question_form">
+		        {{ field.errors }}
+		        {{ field.help_text }}
+		        {{ field }}
+		    </div>
+		    {% endfor %}
+		    <div class="button_wrapper">
+				<input type="submit" name="submit" value="Submit" />
+			</div>
+		    <a class="btn-link" id="cancelButton" href="/manage/">Cancel</a>
+	     </form>
+	</div>
+</div>
+
+{% else %}
+
+<div class="XLSpace"></div>
+<div class="container" id="notAuthorisedText">
+	This page is for administration use only. If you are an admin, login <a class="btn-link" href="/login/">here</a>,
+	or return to the homepage <a class="btn-link"href="/index/">here</a>.
+</div>
+
+{% endif %}
+
+{% endblock %}

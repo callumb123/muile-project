@@ -1,0 +1,34 @@
+IMPORTANT UNITY NOTES:
+
+For the time being, the unity build lives on the UNITYBRANCH
+This is, for all intents and purposes, Unity's master branch (until a decision is made)
+
+PLEASE DO NOT directly push to UNITYBRANCH - make merge requests into UNITYBRANCH as you would master
+(and branch off UNITYBRANCH inside gitlab)
+
+BE CAREFUL about deleting things within unity's file tree - there have been cases of unity doing 
+permanent deletions of files in such a way that git can't easily roll it back
+(If this happens to you, you might have to junk the branch by doing:
+ git fetch origin; git reset --hard origin/UNITYBRANCH; git pull
+This will force a hard reset back to whatever state UNITYBRANCH is at currently)
+
+BE CAREFUL with scenes - making any changes to the MULL scene when someone else is working on it
+will most likely cause a conflict that is an absolute pain in the arse to fix. 
+Try to work with prefabs and scripts as much as possible - and announce if you are making any major scene changes.
+
+that's all: remember to drink responsibly and stay in school kids
+
+ALSO, BUILD INSTRUCTIONS:
+Ensure your copy of unity has WebGL building installed
+Then, go to: 
+	File -> Build Settings -> WebGL, and click on "Build and Run"
+	Select a folder to put the built WebGL stuff in (I use 3DMULLBUILD personally)
+Go get a cup of tea and relax
+When it's done, to see the changes on the website, copy the Build folder inside wherever you told it
+to save the built WebGL stuff, and paste it into csj_project/csj_project/static/js 
+It should overwrite the Build folder that already exists there. This is good.
+
+Then, refresh/run the website and watch the magic happen
+
+
+

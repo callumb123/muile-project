@@ -1,0 +1,138 @@
+#addSettlementContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    width: 75%;
+    border-radius: 1em;
+    background: linear-gradient(to top, rgba(3,23,39, 0.9), rgba(11,135,125, 0.9));
+    color: white;
+}
+
+#addSettlementContainer a{
+    color: #fcd137;
+}
+
+
+#settlement_form_holder form{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: space-between;
+    margin: auto;
+}
+
+#settlement_form {
+    width: 40%;
+    margin: auto;
+    margin-bottom: 1vh;
+    padding: 1vh;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#settlement_form ul{
+    list-style-type: none;
+}
+
+#textAndField{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+
+#errorTextContainer{
+    padding-top: 0.5vh;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#emptyCell{
+    flex: 1;
+}
+
+#settlementErrors{
+    flex: 1;
+    color: red;
+    font-weight: bold;
+}
+
+
+#settlementHelpText{
+    flex: 1;
+    margin-right: .3vw;
+}
+
+#settlementField{
+    flex: 1;
+}
+
+#settlementCategoryForm{
+   display: flex;
+   flex-direction: row;
+   margin-top: 4vh;
+   margin-bottom: 4vh;
+   justify-content: center;
+}
+
+#settlementCategoryHelpText{
+   flex: 1;
+}
+
+#settlementCategoryField{
+   flex: 7;
+}
+
+#settlementCategoryForm ul{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   margin: auto;
+}
+
+#settlementCategoryForm li{
+    list-style-type: none;
+    width: 33%;
+}
+
+#textAndFieldCategory{
+   display: flex;
+   flex-direction: row;
+   width: 90%;
+   text-align: left;
+}
+
+#cancelButton{
+    padding-top:1vh;
+    margin: auto;
+}
+
+#notAuthorisedText{
+    width: 40%;
+    border-radius: 1em;
+    padding: 2vh;
+    background: linear-gradient(to top, rgba(3,23,39, 0.9), rgba(11,135,125, 0.9));
+    color: white;
+}
+
+#notAuthorisedText a{
+    color: #fcd137;
+}
+
+.XLSpace{
+    height: 20vh;
+}
+
+.mediumSpace{
+    height: 10vh;
+}
+
+.smallSpace{
+    height: 5vh;
+}

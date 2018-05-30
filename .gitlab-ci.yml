@@ -1,0 +1,15 @@
+image: blang/latex
+build:
+   script:
+      - latexmk -pdf -cd docs/dissertation/dissertation.tex
+   artifacts:
+     paths:
+      - "*.pdf"
+test:
+  script:
+  - cd csj_project/
+  - pip install -r requirements.txt
+  - python manage.py makemigrations
+  - python manage.py migrate
+  - python populate_settlements.py
+  - python manage.py test
